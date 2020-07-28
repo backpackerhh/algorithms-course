@@ -14,6 +14,12 @@ function palindrome(str) {
       .reverse()
       .join("") === str
   );
+
+  // Alternative 1:
+  // return str.split("").every((char, idx) => char === str[str.length - idx - 1]);
+
+  // Alternative 2:
+  // return str.split("").reduce((rev, char) => char + rev, "") === str;
 }
 
 module.exports = palindrome;
