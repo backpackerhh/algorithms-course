@@ -11,6 +11,27 @@ function reverse(str) {
     .split("")
     .reverse()
     .join("");
+
+  // Alternative 1:
+  // let reversedStr = "";
+
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   reversedStr += str[i];
+  // }
+
+  // return reversedStr;
+
+  // Alternative 2:
+  // let reversedStr = "";
+
+  // for (character of str) {
+  //   reversedStr = character + reversedStr;
+  // }
+
+  // return reversedStr;
+
+  // Alternative 3:
+  // return str.split("").reduce((rev, char) => char + rev, "")
 }
 
 module.exports = reverse;
