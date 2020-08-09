@@ -14,6 +14,28 @@ function maxChar(str) {
   }, {});
 
   return Object.keys(mappedChars).reduce((a, b) => (mappedChars[a] > mappedChars[b] ? a : b));
+
+  // Alternative 1:
+  // const mappedChars = {};
+  // let max = 0;
+  // let maxChar = "";
+
+  // for (let char of str) {
+  //   if (mappedChars[char]) {
+  //     mappedChars[char]++;
+  //   } else {
+  //     mappedChars[char] = 1;
+  //   }
+  // }
+
+  // for (let char in mappedChars) {
+  //   if (mappedChars[char] > max) {
+  //     max = mappedChars[char];
+  //     maxChar = char;
+  //   }
+  // }
+
+  // return maxChar;
 }
 
 module.exports = maxChar;
