@@ -20,6 +20,21 @@ function anagrams(stringA, stringB) {
   }
 
   return checkAnagram(stringA) === checkAnagram(stringB);
+
+  // Alternative 1:
+  // function checkAnagram(str) {
+  //   return str
+  //     .replace(/[^\w]/g, '')
+  //     .split("")
+  //     .sort()
+  //     .join("")
+  //     .toLowerCase();
+  // }
+
+  // return checkAnagram(stringA) === checkAnagram(stringB);
+
+  // Alternative 2:
+  // Build char map -> Crazy!
 }
 
 module.exports = anagrams;
