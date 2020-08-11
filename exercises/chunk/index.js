@@ -22,6 +22,18 @@ function chunk(array, size) {
   }
 
   return chunked;
+
+  // Alternative 1:
+  // let chunked = [];
+  // let index = 0;
+
+  // while (index < array.length) {
+  //   chunked.push(array.slice(index, index + size));
+
+  //   index += size;
+  // }
+
+  // return chunked;
 }
 
 module.exports = chunk;
