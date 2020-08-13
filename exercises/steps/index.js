@@ -21,6 +21,21 @@ function steps(n) {
   for (let idx = 1; idx <= n; idx++) {
     console.log("#".repeat(idx) + " ".repeat(n - idx));
   }
+
+  // Alternative 1:
+  // for (let row = 1; row <= n; row++) {
+  //   let step = "";
+
+  //   for (let column = 1; column <= n; column++) {
+  //     if (column <= row) {
+  //       step += "#";
+  //     } else {
+  //       step += " ";
+  //     }
+  //   }
+
+  //   console.log(step);
+  // }
 }
 
 module.exports = steps;
