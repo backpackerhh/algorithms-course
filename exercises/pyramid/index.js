@@ -13,7 +13,30 @@
 //       '  #  '
 //       ' ### '
 //       '#####'
+//   pyramid(4)
+//       '   #   '
+//       '  ###  '
+//       ' ##### '
+//       '#######'
+//   pyramid(5)
+//       '    #    '
+//       '   ###   '
+//       '  #####  '
+//       ' ####### '
+//       '#########'
 
-function pyramid(n) {}
+function pyramid(n) {
+  if (n < 1) return null
+
+  const maxCharsCount = n * 2 - 1
+
+  for (let i = 1; i <= n; i++) {
+    const hashCharsCount = i * 2 - 1
+    const hashChars = '#'.repeat(hashCharsCount)
+    const whiteSpaces = ' '.repeat((maxCharsCount - hashCharsCount) / 2)
+
+    console.log(whiteSpaces + hashChars + whiteSpaces)
+  }
+}
 
 module.exports = pyramid;
