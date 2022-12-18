@@ -10,6 +10,10 @@
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
 
-class Stack {}
+class Stack extends Array {
+  peek() {
+    return this.at(-1)
+  }
+}
 
 module.exports = Stack;
