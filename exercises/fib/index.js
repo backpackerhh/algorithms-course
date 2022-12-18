@@ -15,6 +15,9 @@ function memoize(fn) {
     if (cache[n]) return cache[n]
 
     return cache[n] = fn(n)
+
+    // Alternative 1:
+    // return cache[n] || (cache[n] = fn(n))
   }
 }
 
