@@ -47,6 +47,17 @@ class Tree {
     }
 
     traverseChildren(this.root)
+
+    // Alternative 1 (way more efficient)
+    // const arr = [this.root]
+
+    // while (arr.length) {
+    //   const node = arr.shift()
+
+    //   arr.push(...node.children)
+
+    //   fn(node)
+    // }
   }
 
   // Depth-First Traversal
@@ -60,6 +71,17 @@ class Tree {
     }
 
     traverseChildren(this.root)
+
+    // Alternative 1
+    // const arr = [this.root]
+
+    // while (arr.length) {
+    //   const node = arr.shift()
+
+    //   arr.unshift(...node.children)
+
+    //   fn(node)
+    // }
   }
 }
 
