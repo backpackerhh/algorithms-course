@@ -11,6 +11,24 @@
 // 4       5
 // Answer: [1, 3, 2]
 
-function levelWidth(root) {}
+function levelWidth(root) {
+  const endOfLevel = "eol"
+  const width = [0]
+  const queue = [root, endOfLevel]
 
-module.exports = levelWidth;
+  while (queue.length > 1) {
+    const node = queue.shift()
+
+    if (node === endOfLevel) {
+      queue.push(endOfLevel)
+      width.push(0)
+    } else {
+      queue.push(...node.children)
+      width[width.length - 1]++
+    }
+  }
+
+  return width
+}
+
+module.exports = levelWidth
